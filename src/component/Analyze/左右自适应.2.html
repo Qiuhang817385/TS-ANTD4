@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style type="text/css">
+			.wrapper {
+				width: 90%;
+				height: 400px;
+				border: 1px solid black;
+				text-align: center;
+				position: relative;
+				margin: 0 auto;
+			}
+
+			.left {
+				width: 50%;
+				height: 100%;
+				float: left;
+				line-height: 400px;
+				font-size: 20px;
+				box-shadow: 0 0 8px #f00;
+			}
+
+			.right {
+				width: 49%;
+				height: 100%;
+				float: right;
+				line-height: 400px;
+				font-size: 20px;
+				box-shadow: 0 0 8px #00f;
+			}
+
+			.mid {
+				width: 1%;
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				background-color: #ccc;
+				box-shadow: 0 0 8px #ccc;
+				cursor: row-resize;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="left">left</div>
+			<div class="mid"></div>
+			<div class="right">right</div>
+		</div>
+		<script src="./jquery.js"></script>
+		<script>
+			$('.mid').mousedown(function(event) {
+				let x = event.clientX;
+				console.log($(this).offset().left);
+				// 在mid内部鼠标点击的点距离左边的距离
+				let tl = event.clientX - $(this).offset().left;
+				console.log(tl);
+				// 左右盒子宽度
+
+				let wrapLeft = $(this).prev().width();
+				let wrapRight = $(this).next().width();
+				// 左侧偏移量
+				let off = $(this).offset().left - wrapLeft;
+				console.log(off);
+
+				$(document).mousemove(function(e) {
+					let MIN = 0;
+					// let MAX = $(".wrapper").width() - $(this).width()
+					let MAX = $(".wrapper").width() - $('.mid').width()
+					// 增量
+					console.log(MAX);
+					let incremental = e.clientX - x;
+					let posiLeft = e.clientX - tl - off;
+					console.log(posiLeft);
+						if(posiLeft >= MIN&&posiLeft <= MAX){
+						console.log(posiLeft);
+						$('.mid').css({
+							"left": posiLeft
+						})
+						$('.mid').prev().css({
+							"width": wrapLeft + incremental,
+						})
+						$('.mid').next().css({
+							"width": wrapRight - incremental,
+						})
+					}
+
+				})
+				$(document).mouseup(function() {
+					$(document).unbind("mousemove")
+				})
+				return false;
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style type="text/css">
+			.wrapper {
+				width: 90%;
+				height: 400px;
+				border: 1px solid black;
+				text-align: center;
+				position: relative;
+				margin: 0 auto;
+			}
+
+			.left {
+				width: 50%;
+				height: 100%;
+				float: left;
+				line-height: 400px;
+				font-size: 20px;
+				box-shadow: 0 0 8px #f00;
+			}
+
+			.right {
+				width: 49%;
+				height: 100%;
+				float: right;
+				line-height: 400px;
+				font-size: 20px;
+				box-shadow: 0 0 8px #00f;
+			}
+
+			.mid {
+				width: 1%;
+				height: 100%;
+				position: absolute;
+				left:50%;
+				background-color: #ccc;
+				box-shadow: 0 0 8px #ccc;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="left">left</div>
+			<div class="mid"></div>
+			<div class="right">right</div>
+		</div>
+		<script src="./jquery.js"></script>
+		<script>
+			$('.mid').mousedown(function(event) {
+				let x = event.clientX;
+				console.log($(this).offset().left);
+				// 在mid内部鼠标点击的点距离左边的距离
+				let tl = event.clientX - $(this).offset().left;
+				// 左右盒子宽度
+				let wrapLeft = $(this).prev().width();
+				let wrapRight = $(this).next().width();
+				// 左侧偏移量
+				let off = $(this).offset().left - wrapLeft;
+
+
+				$(this).mousemove(function(e) {
+					let MIN = 0;
+					let MAX = $(".wrapper").width() - $(this).width()
+					// 增量
+					let incremental = e.clientX - x;
+					let posiLeft = e.clientX - tl - off;
+					if(posiLeft<=MIN){
+						posiLeft = MIN;
+					}else if(posiLeft>=MAX){
+						posiLeft = MAX;
+					}
+					$(this).css({
+						"left": posiLeft
+					})
+					$(this).prev().css({
+						"width":wrapLeft + incremental,
+					})
+					$(this).next().css({
+						"width":wrapRight - incremental,
+					})
+				}).mouseup(function() {
+					$(this).unbind("mousemove")
+				})
+				return false;
+			})
+			$('.left').mouseover(function() {
+				$('.mid').unbind('mousemove')
+			})
+			$('.right').mouseover(function() {
+				$('.mid').unbind('mousemove')
+			})
+		</script>
+	</body>
+</html>

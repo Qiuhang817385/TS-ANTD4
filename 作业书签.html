@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 align="center">章节</h1>
+  <ol>
+    <li><a href="#第一章">第一章</a></li>
+    <li><a href="#第二章">第二章</a></li>
+    <li><a href="#第三章">第三章</a></li>
+    <li><a href="#第四章">第四章</a></li>
+    <li><a href="#第六章">第六章</a></li>
+    <li><a href="#第七章">第七章</a></li>
+  </ol>
+  <h1 align="center"> <a href="" id="第一章">第一章</a></h1>
+  <ol>
+    <li>
+      首页命名为index.html
+    </li>
+    <li>
+      WWW是一个基于超文本方式的信息检索工具, www成功在于它制定了一套标准的,易于人们掌握的超文本开发语言HTML、信息资源的统一定位格式URL和超文本传输协议HTTP
+    </li>
+    <li>
+      网络运行:服务器--域名/ip地址--站点--index.html(首页)<br>
+      站点通常包含:<ol>
+        <li>html结构层</li>
+        <li>css表现层</li>
+        <li>js行为层</li>
+        <li>img</li>
+      </ol>
+    </li>
+    <li>
+      <ol>
+        <li>
+          HTML:超文本标记语言，是构成WEB页面的重要工具
+        </li>
+        <li>
+          xml:可扩展文本标记语言(区分大小写,自己定义的地方要用双标记)
+        </li>
+        <li>
+          xhtml:可扩展超文本标记语言 文档类型：框架型 严格型 过渡型<br>
+          (现在学的HTML4.0 主要用于PC段'
+          之后会学H5用于移动端 两者区别H5新增加了语义化标签
+          用<>来嵌套)
+        </li>
+        <li>
+          URL（统一资源定位器）用于描述internet上资源的位置和访问方式——包含URI <br>
+          格式： 协议名：//网址或IP端口号/URI
+        </li>
+        <li>
+          URI(统一资源标识符)<br>构成：
+          <ol>
+            <li> host（主机名）：定义此域中的主机</li>
+            <li> path（路径）：定义服务的端口号，端口号通常是被省略的，HTTP默认端口号是80</li>
+            <li>filename（文件名）：定义的文档名称</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li>
+      1.http超文本传输协议 <br>
+      2.smtp邮件传输协议<br>
+      3.ftp文件传输协议
+    </li>
+    <li>
+      动态页面和静态页面主要不同在于：<br>
+      1、静态页面可以不用传输到服务器上；<br>
+      2、静态页面不能进行交互
+    </li>
+    <li>
+      网页浏览器是显示网页服务器或档案系统内的文件，并使用用户与这些文件进行交互的一种软件。它用来显示万维网或局域网文字、影像及其他资讯
+    </li>
+  </ol>
+
+  <h1 align="center"> <a href="" id="第二章">第二章</a></h1>
+  <ol>
+    <li>
+      在基本的HTML文档中，只需要两种元素存在：一种是HTML标记，另一种则是普通文本<br>
+      一个简单的HTML文档的组成结构如下：<br>
+      <xmp>
+        <html>
+        <!--超文本文件开始-->
+
+        <head>
+          <!--首部元素开始-->
+          <title>文档标题</title>
+        </head>
+        <!--首部元素结束-->
+        <boby>
+          <!--正文元素开始-->
+          文档部分，正文部分
+        </boby>
+        <!--正文元素结束-->
+
+        </html>
+        <!--超文本文件结束-->
+      </xmp>
+    </li>
+    <li>HTML文档的head是一个容器元素，在head容器元素中允许出现以下元素：
+      <ol>
+        <li>title元素:
+          <xmp>
+            <title>文档标题</title>
+          </xmp>
+        </li>
+        <li>
+          link元素:
+          <xmp>
+            <link name="text" rel="text" href="URL">
+          </xmp>
+        </li>
+        <li>
+          meta元素
+          <xmp> meta是第一个学到的单标记 属性name http-eguiv
+            <meta name="text" content="text">
+            key="value"属性等于值</xmp>
+        </li>
+        <li>
+          style元素：用于写css
+        </li>
+        <li>
+          script元素：用于写js
+        </li>
+        <li>
+          meta 单标记<br>
+          属性： 1.name 主要用于描述页面<p>keywords:关键字</p>
+          2.http-equiv 主要用于和服务器相关信息<br>
+          <p> refresh:刷新</p>
+          <p> content-type:文本类型</p>
+          3.（content 是解析这两种属性的）<br>
+          4.charset定义字符集 1.gb2312 2.utf-8
+        </li>
+        <li>
+          body容器属性:
+          <ol>
+            <li>背景属性:bgcolor背景色 background背景图案 </li>
+            <xmp>
+
+              <body background="../img1.jpg"></body>
+            </xmp>
+            <li>文字属性:text正文文字颜色 link链接文字颜色</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+
+
+
+
+  <h1 align="center"> <a href="" name="第三章">第三章</a></h1>
+  <ol>
+    <li>
+      标题文字<br>
+      <xmp>
+        <h#>文字</h#>
+      </xmp>..#表示：1-6（数字小文字大）
+      基本语法：
+      <xmp>
+        <h#align="left/center/right">标题文字 </h#> </xmp> align表示标题水平对齐方式 例如： <xmp>
+          <h1 align="center">朗科网络</h1>
+      </xmp>h标记是一个段落标记自己单独站一行
+    </li>
+    <li>
+      文字标记<br>
+      <xmp>
+        <font face="" size="" color="">文字</font>
+      </xmp>
+      <ol>
+        <li> face表示文字字体； </li>
+        <li> size表示文字大小；</li>
+        <li> color表示文字颜色；</li>
+      </ol>
+      例如： <xmp>
+        <font face="微软雅黑" size="-2" color="#f00">好好学习</font>
+      </xmp>注释：默认字体3 字体从1-7
+    </li>
+    <li>
+      特殊字符:<br>
+      <xmp>常见的特殊字符
+        空格:&nbsp;--添加空格
+        版权符:&copy;
+        大于号:&gt;
+        小于号:&lt;
+        注册商标:&reg;</xmp>
+
+    </li>
+    <li>
+      标记的嵌套<br>
+      注意当标记不冲突时全都显示，当有冲突时按就近原则显示<br>
+      例如：<xmp>
+        <h1 align="center">
+          <font fase="宋体＂color=" #0f0">您好</font>
+        </h1>
+      </xmp>
+    </li>
+    <li>
+      文字修饰<br>
+      <xmp>基本语法：<b>...</b>粗体<strong>...</strong>
+        <i>..</i>斜体<em>...</em>
+        <u>...</u>下划线
+        <del>...</del>删除线
+        <sup>...</sup>上标
+        <sub>...</sub>下标
+        <tt>..</tt>等宽文字
+        称为行内标记
+        <address>....</address>网址
+        称为块级标记
+      </xmp>
+    </li>
+    <li>
+      段落标记<br>
+      基本语法：<br>
+      <xmp>
+        <p>文字内容</p>
+      </xmp>
+      块级标记
+      <xmp> 换行标记：<br> 它是一个单标记
+        注意：一个<p>空一行，一个</P>空一行
+
+        div就是一个单独的块级标记
+        span就是单独的一个行内标记</xmp>
+    </li>
+    <li>
+      水平分割线<br>
+      基本用法：
+      <xmp>
+        <hr width="" size="" color="" noshade>
+      </xmp>
+      它是一个单标记<ol>
+        <li>
+          width表示分割线的宽度；
+        </li>
+        <li> size表示分割线的粗细；</li>
+        <li> color表示分割线的颜色；</li>
+        <li> noshade表示是否有阴影；</li>
+      </ol>
+      例子：<xmp>
+        <hr width="500" color="#00" size="100">
+      </xmp>
+    </li>
+    <li>
+      其他段落标记<br>
+      段落缩进：<xmp>
+        <blockquote>文字</blockquote>
+      </xmp>
+    </li>
+  </ol>
+  <!-- 网址:http://www.sj33.cn/jc/wyjc/200710/12409.html -->
+  <h1 align="center"> <a href="" name="第四章">第四章</a></h1>
+  <ol>
+    <li>
+      列表简介<br>
+      列表类型及其标记符号
+      <ol>
+        <li> 无序列表：ul</li>
+        <li> 有序列表：ol </li>
+        <li> 定义列表：dl</li>
+        <li> 目录列表：dir</li>
+        <li> 菜单列表：menu</li>
+      </ol>
+    </li>
+    <li>
+      无序列表标记<br>
+      <xmp>
+        <ul type=符号类型>
+          <li>第一个列表项</li>
+        </ul>
+      </xmp>
+      li里面也可以加属性type
+      type属性取值有<ol>
+        <li> disc(实心圆）默认就是实心圆</li>
+        <li>circle（空心圆）</li>
+        <li>square(实心方块）</li>
+      </ol>
+
+    </li>
+    <li>
+      有序列表标记<br>
+      <xmp>
+        <ol>
+          <li>第一个列表项</li>
+        </ol>
+      </xmp> start设置起始数位<br>使用有序列表标记的type属性取值以及相对应的编号样式如下：
+      <ol>
+        <li>“1”指定项目标号为阿拉伯数字；</li>
+        <li> “a”指定项目标号为小写英文字母；</li>
+        <li>“A”指定项目标号为大写英文字母；</li>
+        <li>“i”指定项目标号为小写罗马数字；</li>
+        <li>“I”指定项目标号为大写罗马数字；</li>
+      </ol>
+    </li>
+    <li>
+      定义列表标记<br>
+      <xmp>
+        <dl>
+          <dt>需要解释词</dt>
+          <dd>对解释词的解释说明</dd>
+        </dl>
+      </xmp>
+    </li>
+    <li>
+      目录列表标记
+      <xmp>
+        <dir>
+    <li>第一个列表项</li>
+    <li>第二个列表项</li>
+    </dir>
+    </xmp>
+    </li>
+    <li>
+      菜单列表标记<br>
+      <xmp>
+        <menu>
+    <li>第一个列表项</li>
+    <li>第二个列表项</li>
+    </menu>
+    </xmp>
+    </li>
+  </ol>
+
+
+  <h1 align="center"><a href="" name="第六章">第六章</a></h1>
+  <ol>
+    <li>
+      链接路径：<ol>
+        <li>绝对路径（从站点开始）；</li>
+        <li> 相对路径；</li>
+        <li>物理路径（从磁盘开始）；</li>
+        <li> 根路径</li>
+      </ol>
+    </li>
+    <li>创建超链接
+      <ol>
+        <li>建立超链接的标记用a。<xmp>以<a>开始，以</a>结束；</xmp>
+        </li>
+        <li>基本语法：<xmp><a href="资源地址" title="指向链接显示的文字" target="窗口名称">超链接内容</a></xmp>
+        </li>
+        <li>_biank:在新窗口中打开被链接文档。</li>
+      </ol>
+    </li>
+    <li>
+      邮件链接:在html页面建立E-mail链接，用户单击链接，系统会自动启动后默认的电子邮件软件，打开一个邮件窗口。<br>
+      基本用法：
+
+      <xmp><a href="E-mail地址？subject=邮件主题">描述文件</a></xmp>
+      <ol>
+        <li> cc=E-mail地址--抄送发件人</li>
+        <li> bcc=E-mail地址--暗送发件人</li>
+        <li> body=邮件内容</li>
+      </ol>
+    </li>
+    <li>
+      图片链接<br>
+      可以为一个图片制定链接
+      <xmp> <a href="url" target="目标窗口的打开方式"><img src="图片地址"></a></xmp>
+      例如：
+      <xmp> <a href="url" target="_blnk">
+          <img src="url">
+        </a></xmp>
+
+    </li>
+    <li>
+      下载文件链接<xmp> <a href="url">链接内容</a></xmp>
+    </li>
+    <li>
+      书签链接<br>
+      在同一页面内要使用书签链接的格式：
+      <xmp> <a href="#书签名称" target="窗口名称">链接标题</a></xmp>
+      在不同页面之间要使用书签的格式（在不同页面中链接的前提是需要指定好链接的页面地址和链接的书签名称）：
+      <xmp><a href="url地址#书签名称" target="窗口名称">链接标题</a></xmp>
+      以上两种链接形式，链接的目标为：
+      <xmp><a name="书签名称">链接内容</a></xmp>
+      例如：
+      <xmp>
+
+        <body>
+          <a name="top">第一章</a>
+          <a href="#top">返回顶部</a>
+        </body>
+      </xmp>
+
+    </li>
+    <li>
+      表格
+      <ol>
+        <li>表格标记
+          <ol>
+            <li>表格标记<xmp>
+                <table></table>
+              </xmp>
+            </li>
+            <li>表头<xmp>
+                <th></th>
+              </xmp>剧中加粗</li>
+            <li>每一行用<xmp>
+                <tr></tr>
+              </xmp>
+            </li>
+            <li>每一列用<xmp>
+                <td></td>
+              </xmp>
+            </li>
+            <li>标题<xmp>
+                <caption></caption>
+              </xmp>
+            </li>
+          </ol>
+        </li>
+        <li>
+          表格的整体外观用<xmp>
+            <table></table>
+          </xmp>标记属性决定
+          <ol>
+            <li> align:定义网页中表格的位置</li>
+            <li>border:定义表格边框粗细,N取整数,单位是像素</li>
+            <li>width:定义表格宽度</li>
+            <li>height:定义表格高度</li>
+            <li>bgcolor:背景颜色</li>
+            <li>backgrond:背景图</li>
+            <li>bordercolor:边界颜色</li>
+          </ol>
+        </li>
+        <li>表格的背景颜色和尺寸设置<br>
+
+          用bgcolor表示格式的背景设置,格式为:
+          <xmp>
+            <table bgcolor="#f00">为表格设置红色背景</table>
+          </xmp>
+        </li>
+        <li>
+          表格的宽度和高度设置
+          <xmp>
+            <table width=n1 height=n2></table>
+          </xmp> (可用百分比,可用像素)
+        </li>
+      </ol>
+    </li>
+    <li>
+      多列合并<br>
+      在表格中使用colspan进行跨多列的设置,格式为:
+      <xmp>
+        <td colspan="n"></td>
+      </xmp>说明：
+      　　colspan="n"中的N表示跨多少列<br>
+      例如:<xmp>
+        <td colspan="3">
+          </dt>
+      </xmp>
+    </li>
+    <li>
+      多行合并<br>
+      在表格中使用rowspan进行跨多行的设置,格式为:<xmp>
+        <td rowspan="n"></td>
+      </xmp>
+      说明：
+      　　rowspan="n"中的N表示跨多少行<br>
+      例如:<xmp>
+        <td rowspan="3">
+          </dt>
+      </xmp>
+    </li>
+    <li>
+      对齐列表<ol>
+        <li>水平对齐的方式是用标记<th>、
+          <td>、和<tr>的align属性,align的属性值分为：center,left,right.
+        </li>
+        <li>垂直对齐的方式用valign属性，vglign属性分为：top(靠单元格项)、bottom(靠单元格底)、middle(靠单元个中)</li>
+      </ol>
+    </li>
+    <li>
+      设置单元格间距<br>
+      语法：<xmp>
+        <table width="" border="1" cellspacing="0">
+          <tr>
+            <td>..</td>
+          </tr>
+        </table>
+      </xmp>
+      <xmp>
+        <table></table>
+      </xmp>标记中cellspacing属性可以设置表格中单元格的间距
+    </li>
+    <li>
+      设置单元格边距<br>
+      在网页文件中，单元格的边距指单元格中的内容与单元格边框的距离<br>
+      基本语法：<xmp>
+        <table width="380" border="1" cellpadding="0"></table>
+      </xmp>
+    </li>
+  </ol>
+
+
+
+  <h1 align="center"><a href="" name="第七章">第七章</a></h1>
+  <ol>
+    <li>插入图片标记
+      <xmp><img src="url"></xmp>
+      说明：<ol>
+        <li> -img是插入图片的标记，其中src是必须的属性</li>
+        <li> -src属性用来指定图片源，及图片的URL。</li>
+        <li> width:指定的图像显示宽度</li>
+        <li>height：指定图像的显示高度</li>
+        <li>hspace:定义图像左侧和右侧的空白</li>
+        <li> vspace:定义图像的顶部底部的空白</li>
+        <li>align:指定图片的对齐方式</li>
+        <li>bordr:指定图片的边框大小</li>
+        <li>alt:如果图片无法显示，代替图片的文字说明</li>
+        <li> title:鼠标划上图片显示的内容</li>
+        <li>注意:高版本浏览器中图片不带边框,低版本浏览器会带有边框,为了兼容性管理 手动加上border="0";</li>
+      </ol>
+    </li>
+    <li>
+      指定图片的对齐方式<xmp><img src="URL" align=""></xmp>
+      align取值<ol>
+        <li>left:在水平方向向上向左对齐</li>
+        <li> right:在水平方向向上向右对齐</li>
+        <li>top:图片顶部与同行其他元素顶部对齐</li>
+        <li> middle:图片顶部与同行其他元素中部对齐</li>
+        <li>bottom:图片顶部与同行其他元素底部对齐</li>
+        <li> absbottom:图片底部与同行最低元素的底部对齐</li>
+        <li>absmiddle:图片底部与同行最大元素的中部对齐</li>
+        <li>baseline:图片底部与文本基准线对齐</li>
+        <li>texttop:图片底部与同行最高元素的顶部对齐</li>
+      </ol>
+    </li>
+    <li>背景音乐的标记<br>
+
+      用法：<xmp>
+        <bgsond src="URL" loop=""></bgsond>
+      </xmp>
+      loop指定声音文件循环次数，值为-1或infinte指定循环播放次数无限
+      <xmp>
+        <bgsond></bgsond>
+      </xmp>只能添加声音文件，而且不能显示和调整播放的控制面板
+    </li>
+    <li>
+      <xmp><embed></xmp>标记可以插入各种各样的多媒体，如WMV,MP3,AVI,SWF,MOV,RMVB等格式的多媒体文件。<br>
+      还可以采用超连接标记<a>将多媒体文件放在网页上，这样当浏览者点击超链接，浏览器将这个多媒体文件先下载到浏览者的机器硬盘上，在条用相应的播放程序播放
+        <br>
+        基本用法：<xmp> <embed src="url" loop="true/false" autostart="true/false" width="宽" height="高" type="media-type"
+            pluginspage="plugin"></xmp>
+        <ol>
+          <li> true可循环播放无限次，false只播放1次；false为默认值。</li>
+          <li>autostart指定媒体文件在下载完成后是否自动播放，</li>
+          <li> width和height分别指定多媒体的宽和高，值都为0时类似背景音乐，可隐藏面板；</li>
+          <li> type指定多媒体文件类型；</li>
+          <li> pluginspage：指定插件页面；</li>
+          <li>高版本浏览器中图片不带边框,低版本浏览器会带有边框,为了兼容性管理 手动加上border="0";</li>
+        </ol>
+    </li>
+  </ol>
+
+</body>
+
+</html>

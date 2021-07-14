@@ -1,0 +1,31 @@
+.container {
+  .bg {
+    // background-color: #fff !important;
+    background-color: rgb(245, 247, 250) !important;
+  }
+
+  :global {
+
+    .ant-table-content {
+
+      .ant-table-tbody>tr.ant-table-row:hover>td {
+        background: #fafafa !important;
+      }
+
+      // tr {
+      //   background: #fff !important;
+      // }
+
+      // 如果有父元素选择器，那么就可以实现，含有 rowspan 的 偶数个父元素tr
+
+      // tr td[rowspan] {
+      //   background-color: #fff !important;
+      // }
+
+      tr:nth-child(2n) {
+        // background: #fafafa;
+        background-color: #fff !important;
+      }
+    }
+  }
+}

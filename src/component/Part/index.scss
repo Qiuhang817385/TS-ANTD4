@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  // 再想改变盒子大小就不需要计算了？
+  box-sizing: border-box;
+}
+
+$ba-color:rgb(220, 253, 253);
+
+// 设置主窗口样式
+#main {
+  width: 360px;
+  height: 420px;
+  background-color: $ba-color;
+  margin: 0 auto;
+  border: 10px solid black;
+  border-radius: 40px;
+
+  display: flex;
+  // 改成 column 的话，主轴方向就变了
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+
+  #stage {
+    position: relative;
+    width: 304px;
+    height: 304px;
+    border: 2px solid black;
+
+    #snake {
+      &>div {
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        // 为了让这个元素块大小就是10px
+        // 设置border和北京颜色一致；
+        // 但是这样做的前提是box-sazing 是 border-box
+        border: 1px solid $ba-color;
+        position: absolute;
+      }
+    }
+
+    #food {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 40px;
+      top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      // align-content 只适用多行的flex容器（也就是flex容器中的子项不止一行时该属性才有效果），它的作用是当flex容器在交叉轴上有多余的空间时，
+      // 将子项作为一个整体
+      // （属性值为：flex-start、flex-end、center时）进行对齐
+      justify-content: space-between;
+      align-content: space-between;
+
+      &>div {
+        width: 4px;
+        height: 4px;
+        background-color: black;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  #score-panel {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
